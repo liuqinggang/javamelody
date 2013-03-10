@@ -1,0 +1,20 @@
+1、解压缩并将javamelody.war复制到Tomcat发布目录下 
+2、在被监控项目web.xml中加入如下代码 
+
+Java代码  
+<filter>    
+        <filter-name>monitoring</filter-name>    
+        <filter-class>net.bull.javamelody.MonitoringFilter</filter-class>    
+</filter>    
+<filter-mapping>    
+        <filter-name>monitoring</filter-name>    
+        <url-pattern>/*</url-pattern>    
+</filter-mapping>    
+<listener>    
+        <listener-class>net.bull.javamelody.SessionListener</listener-class>    
+</listener>   
+
+3、将javamelody-1.29.0.jar jrobin-1.5.9.1.jar复制到被监控项目的LIB目录 
+4、启动Tomcat应用服务器并访问javamelody应用，如http://localhost:8080/javamelody 
+5、根据实际情况做如下设置 
+6、点击Add按钮即可 
