@@ -1,7 +1,7 @@
-1¡¢copy javamelody.war to {Tomcat}
-2¡¢add code to web.xml
+1.copy javamelody.war to {Tomcat}
+2.add code to web.xml
 
-Java code;
+Java code:
 <filter>    
         <filter-name>monitoring</filter-name>    
         <filter-class>net.bull.javamelody.MonitoringFilter</filter-class>    
@@ -14,7 +14,8 @@ Java code;
         <listener-class>net.bull.javamelody.SessionListener</listener-class>    
 </listener>   
 
-3¡¢cp javamelody-1.29.0.jar jrobin-1.5.9.1.jar {WEB-INFO/LIB}
+3.cp javamelody-1.29.0.jar jrobin-1.5.9.1.jar {WEB-INFO/LIB}
 
-4¡¢startup Tomcat webapp javamelody app£¬eg:http://localhost:8080/javamelody 
+4.startup Tomcat webapp javamelody app£¬eg:http://localhost:8080/javamelody
+http://localhost:8080/monitoring
 
